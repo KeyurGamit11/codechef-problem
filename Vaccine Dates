@@ -1,0 +1,33 @@
+4                    
+10 8 12 
+14 2 10
+4444 5555 6666 
+8 8 12
+output:
+Take second dose now
+Too Late
+Too Early
+Take second dose now
+#code:
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int T;
+    cin >> T;
+    while(T--){
+        int D,L,R;
+        cin >> D >> L >> R;
+        if(D >= L && D <= R){
+            cout << "Take second dose now" << endl;
+        }
+        else if ( D >  L && D > R){
+            cout << "Too Late" << endl;
+        }
+        else if(D < L && D < R){
+            cout << "Too Early" << endl;
+        }
+    }
+    return 0;
+}
